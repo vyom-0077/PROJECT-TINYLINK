@@ -13,7 +13,11 @@ const { pool } = require("./db");
 app.use(
   cors({
     // bodyParser = require('body-parser');
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin:
+      process.env.FRONTEND_URL ||
+      "https://project-tinylink.vercel.app" ||
+      "http://localhost:5173" ||
+      "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
